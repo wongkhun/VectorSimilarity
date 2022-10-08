@@ -1,2 +1,3 @@
 # VectorSimilarity
-Measurement of Vector Similarity
+
+Calculate the similarity between two vectors.
