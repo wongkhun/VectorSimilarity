@@ -5,6 +5,8 @@ from scipy.spatial.distance import cdist, pdist
 # https://cloud.tencent.com/developer/article/1668762
 # https://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.distance.cdist.html
 
+def inner_product(q,d):
+    return sum([(a-b)**2 for (a,b) in zip(q,d)])
 
 def euclidean_distance(q,d):
     return math.sqrt(sum([(a-b)**2 for (a,b) in zip(q,d)]))
@@ -84,6 +86,7 @@ def jaccard_distance(q,d):
 
 q = [0.1, 0.2, 0.4]
 d = [0.12, 0.23, 0.2]
+print(inner_product(q,d))
 print(euclidean_distance(q,d))
 print(manhattan_distance(q,d))
 print(chebyshev_distance(q,d))
